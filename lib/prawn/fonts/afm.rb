@@ -139,7 +139,7 @@ module Prawn
       # @param text [String]
       # @return [String]
       def normalize_encoding(text)
-        text.encode('windows-1252')
+        text.gsub("−", "-").encode('windows-1252')
       rescue ::Encoding::InvalidByteSequenceError,
              ::Encoding::UndefinedConversionError
 
