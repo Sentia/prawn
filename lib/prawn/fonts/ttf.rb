@@ -323,7 +323,7 @@ module Prawn
       # @param text [String]
       # @return [String]
       def normalize_encoding(text)
-        text.gsub("−", "−").encode(::Encoding::UTF_8)
+        text.gsub("−", "-").encode(::Encoding::UTF_8)
       rescue StandardError
         raise Prawn::Errors::IncompatibleStringEncoding,
           "Encoding #{text.encoding} can not be transparently converted to UTF-8. " \
