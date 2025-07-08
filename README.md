@@ -1,3 +1,9 @@
+# Reason for Forking:
+
+The "−" character was incompatible with Prawn pdf....had to fork and update it in source code to handle any appearances of "−" in pdf to use "-".
+
+Found in `afm.rb` in `#normalize_encoding`.
+
 # Prawn: Fast, Nimble PDF Generation For Ruby
 
 [![Gem Version](https://badge.fury.io/rb/prawn.svg)](http://badge.fury.io/rb/prawn)
@@ -9,24 +15,24 @@ Prawn is a pure Ruby PDF generation library that provides a lot of great
 functionality while trying to remain simple and reasonably performant. Here are
 some of the important features we provide:
 
-* Vector drawing support, including lines, polygons, curves, ellipses, etc.
-* Extensive text rendering support, including flowing text and limited inline
+- Vector drawing support, including lines, polygons, curves, ellipses, etc.
+- Extensive text rendering support, including flowing text and limited inline
   formatting options.
-* Support for both PDF builtin fonts as well as embedded TrueType fonts
-* A variety of low level tools for basic layout needs, including a simple grid
+- Support for both PDF builtin fonts as well as embedded TrueType fonts
+- A variety of low level tools for basic layout needs, including a simple grid
   system
-* PNG and JPG image embedding, with flexible scaling options
-* Security features including encryption and password protection
-* Tools for rendering repeatable content (i.e headers, footers, and page
+- PNG and JPG image embedding, with flexible scaling options
+- Security features including encryption and password protection
+- Tools for rendering repeatable content (i.e headers, footers, and page
   numbers)
-* Comprehensive internationalization features, including full support for UTF-8
+- Comprehensive internationalization features, including full support for UTF-8
   based fonts, right-to-left text rendering, fallback font support, and extension
   points for customizable text wrapping.
-* Support for PDF outlines for document navigation
-* Low level PDF features, allowing users to create custom extensions by dropping
+- Support for PDF outlines for document navigation
+- Low level PDF features, allowing users to create custom extensions by dropping
   down all the way to the PDF object tree layer. (Mostly useful to those with
   knowledge of the PDF specification)
-* Lots of other stuff!
+- Lots of other stuff!
 
 ## Should You Use Prawn?
 
@@ -46,7 +52,6 @@ us, it should work pretty much anywhere. We officially support all Ruby versions
 suported by Ruby Core Team and JRuby versions of matching Ruby version. However
 we will accept patches to fix problems on other Ruby platforms if they aren't
 too invasive.
-
 
 ## Installing Prawn
 
@@ -73,7 +78,6 @@ end
 
 Of course, you'll probably want to do more interesting things than that...
 
-
 ## Manual
 
 The manual is a series of examples that demonstrate use of the wide range of
@@ -88,9 +92,8 @@ what Prawn provides and how to use it.
 To build the manual, here's what you need to do:
 
 1. Clone the repository
-3. Run `gem install -g`
-4. Run `rake manual`, which will generate _manual.pdf_ in the project root
-
+2. Run `gem install -g`
+3. Run `rake manual`, which will generate _manual.pdf_ in the project root
 
 ## Release Policies
 
@@ -107,7 +110,6 @@ Be sure to read the release notes in
 [CHANGELOG.md](https://github.com/prawnpdf/prawn/blob/master/CHANGELOG.md) each
 time we cut a new release, and lock your gems accordingly.
 
-
 ## Support
 
 The easiest way to get help with Prawn is to post a message to our
@@ -123,13 +125,11 @@ publicly, and be sure to reduce your example code as much as possible so that
 those who are responding to your question can more easily see what the issue
 might be.
 
-
 ## Code of Conduct
 
 Prawn adheres to the [Contributor Covenant](CODE_OF_CONDUCT.md). Unacceptable
 behavior can be reported to conduct@prawnpdf.org which is monitored by the core
 team.
-
 
 ## Contributing
 
@@ -150,7 +150,7 @@ You can run our test suite in a few different ways:
 
 1. Running `rake` will run the entire test suite excluding any unresolved issues
 2. Running `rspec` will run the entire test suite including unresolved issues
-3. Running `rspec -t unresolved` will run *only* unresolved issues
+3. Running `rspec -t unresolved` will run _only_ unresolved issues
 4. Running `rspec -t issue:NUMBER` will run the tests for a specific issue
 
 These filters make it possible for us to add failing test cases for bugs that
@@ -173,20 +173,20 @@ direction of the project.
 These are the folks to contact if you have a maintenance-related issue with
 Prawn:
 
-* Alexander Mankuta ([PointlessOne](https://github.com/PointlessOne))
+- Alexander Mankuta ([PointlessOne](https://github.com/PointlessOne))
 
 ### Inactive maintainers
 
 These folks have helped out in a maintenance role in the past, but are no longer
 actively involved in the project:
 
-* Gregory Brown ([practicingruby](https://github.com/practicingruby))
-* Brad Ediger ([bradediger](https://github.com/bradediger))
-* James Healy ([yob](https://github.com/yob))
-* Daniel Nelson ([Bluejade](https://github.com/Bluejade))
-* Jonathan Greenberg ([jonsgreen](https://github.com/jonsgreen))
-* Jamis Buck ([jamis](https://github.com/jamis))
-* Evan Sharp ([PacketMonkey](https://github.com/PacketMonkey))
+- Gregory Brown ([practicingruby](https://github.com/practicingruby))
+- Brad Ediger ([bradediger](https://github.com/bradediger))
+- James Healy ([yob](https://github.com/yob))
+- Daniel Nelson ([Bluejade](https://github.com/Bluejade))
+- Jonathan Greenberg ([jonsgreen](https://github.com/jonsgreen))
+- Jamis Buck ([jamis](https://github.com/jamis))
+- Evan Sharp ([PacketMonkey](https://github.com/PacketMonkey))
 
 ## License
 
