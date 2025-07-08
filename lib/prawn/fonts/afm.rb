@@ -139,7 +139,6 @@ module Prawn
       # @param text [String]
       # @return [String]
       def normalize_encoding(text)
-        Rails.logger.info("normalize_encoding: #{text}")
         text.gsub("−", "-").encode('windows-1252')
       rescue ::Encoding::InvalidByteSequenceError,
              ::Encoding::UndefinedConversionError
